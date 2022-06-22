@@ -37,22 +37,29 @@ namespace LinkedListDemo
             
         }
 
-        public bool Append(int data)
+        public bool Insert(int ind, int data)
         {
             Node n = new Node(data);
-            if (head == null)
+            if (ind == 0)
             {
+                n.next = head.next;
                 head = n;
                 return true;
             }
-
-            Node t = head;
-            while (t.next != null)
+            Node t = head, pre = null;
+            while (ind > 0 && t != null)
             {
+                ind--;
+                pre = t;
                 t = t.next;
             }
-            t.next = n;
-            return true;
+            if (ind == 0)
+            {
+                pre.next = n;
+                n.next = t;
+                return true;
+            }
+            throw new NullReferenceException("index is not in range");
         }
         public void Display()
          {
