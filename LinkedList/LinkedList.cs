@@ -41,7 +41,7 @@ namespace LinkedListDemo
         {
             if (head == null)
             {
-                Console.WriteLine("Linked List is Empty");
+                Console.WriteLine("LinkedList is Empty");
                 return;
             }
             Node temp = head;

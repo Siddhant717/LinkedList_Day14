@@ -10,8 +10,8 @@ namespace LinkedListDemo
             linkedlist.Add(70);
             linkedlist.Add(30);
             linkedlist.Add(56);
-
             linkedlist.Display();
+
         }
     }
 }
