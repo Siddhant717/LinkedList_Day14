@@ -37,21 +37,22 @@ namespace LinkedListDemo
             
         }
 
-        public int Pop()
+        public bool Search(int input)
         {
             if (head == null)
             {
-                throw new NullReferenceException("List is Empty");
+                throw new NullReferenceException("empty List");
             }
-            Node t = head, p = head;
-            while (t.next != null)
+
+            Node t = head;
+            while (t != null)
             {
-                p = t;
+                if (t.data.Equals(input))
+                    return true;
                 t = t.next;
             }
-            int obj = t.data;
-            p.next = null;
-            return obj;
+            return false;
+
         }
         public void Display()
          {
