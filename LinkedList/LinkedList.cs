@@ -36,12 +36,11 @@ namespace LinkedListDemo
 
             
         }
-
-        public void Display()
-        {
+         public void Display()
+         {
             if (head == null)
             {
-                Console.WriteLine("LinkedList is Empty");
+                Console.WriteLine("Linked List is Empty");
                 return;
             }
             Node temp = head;
