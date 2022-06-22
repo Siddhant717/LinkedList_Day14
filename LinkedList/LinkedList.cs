@@ -37,14 +37,14 @@ namespace LinkedListDemo
             
         }
 
-        public bool Insert(int ind, int data)
+        public int Pop(int ind)
         {
-            Node n = new Node(data);
+            int obj;
             if (ind == 0)
             {
-                n.next = head.next;
-                head = n;
-                return true;
+                obj = head.data;
+                head = head.next;
+                return obj;
             }
             Node t = head, pre = null;
             while (ind > 0 && t != null)
@@ -53,13 +53,17 @@ namespace LinkedListDemo
                 pre = t;
                 t = t.next;
             }
+
+
             if (ind == 0)
             {
-                pre.next = n;
-                n.next = t;
-                return true;
+                pre.next = t.next;
+                obj = t.data;
+                return obj;
             }
-            throw new NullReferenceException("index is not in range");
+            throw new NullReferenceException("index is not range");
+
+
         }
         public void Display()
          {

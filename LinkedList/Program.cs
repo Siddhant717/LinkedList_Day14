@@ -8,9 +8,13 @@ namespace LinkedListDemo
         {
             LinkedList linkedlist = new LinkedList();
             linkedlist.Add(70);
+            linkedlist.Add(30);
+           
             linkedlist.Add(56);
-            linkedlist.Insert(1, 30);
-            Console.WriteLine("Final LinkedList Sequence Is- ");
+            Console.WriteLine("Final LinkedList Sequence before using Pop Method Is- ");
+            linkedlist.Display();
+            linkedlist.Pop(0);
+            Console.WriteLine("Final LinkedList Sequence after applied Pop Method Is- ");
             linkedlist.Display();
 
 
