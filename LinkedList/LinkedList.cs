@@ -37,33 +37,21 @@ namespace LinkedListDemo
             
         }
 
-        public int Pop(int ind)
+        public int Pop()
         {
-            int obj;
-            if (ind == 0)
+            if (head == null)
             {
-                obj = head.data;
-                head = head.next;
-                return obj;
+                throw new NullReferenceException("List is Empty");
             }
-            Node t = head, pre = null;
-            while (ind > 0 && t != null)
+            Node t = head, p = head;
+            while (t.next != null)
             {
-                ind--;
-                pre = t;
+                p = t;
                 t = t.next;
             }
-
-
-            if (ind == 0)
-            {
-                pre.next = t.next;
-                obj = t.data;
-                return obj;
-            }
-            throw new NullReferenceException("index is not range");
-
-
+            int obj = t.data;
+            p.next = null;
+            return obj;
         }
         public void Display()
          {
