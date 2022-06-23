@@ -17,14 +17,22 @@ namespace LinkedListDemo
             linkedlist.Display();
 
             Console.WriteLine("-------------------------");
-           bool flag= linkedlist.Search(30);
-            Console.WriteLine(flag);
+           
 
-            Console.WriteLine("-------------------------");
             linkedlist.Insert(2, 40);
-            Console.WriteLine(" Now Final LinkedList Sequence Is- ");
+           
+            Console.WriteLine("Final LinkedList Sequence after adding 40 Is- ");
             linkedlist.Display();
-
+            bool flag = linkedlist.Search(40);
+            Console.WriteLine("-------------------------");
+            Console.WriteLine(flag);
+            Console.WriteLine("-------------------------");
+            linkedlist.Pop(2);
+            Console.WriteLine("Final LinkedList Sequence after deleting 40 Is- ");
+            linkedlist.Display();
+            Console.WriteLine("-------------------------");
+            Console.WriteLine("Size of Final LinkedList Sequence is- "+ linkedlist.Size());
+          
 
 
 
